@@ -12,7 +12,6 @@ import java.io.IOException;
 public class Application {
     public static void main(String[] args) {
         TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();
-        // 컨테이너에 서블릿 등록
         WebServer webServer = factory.getWebServer(servletContext -> {
             servletContext.addServlet("hello", new HttpServlet() {
                 @Override
@@ -20,7 +19,8 @@ public class Application {
                         throws ServletException, IOException {
                     resp.setStatus(200);
                     resp.setContentType("text/plain");
-                    resp.getWriter().println("Hello Servlet");
+                    // 요청 파라미터를 읽어 동적으로 응답하기
+                    resp.getWriter().println("Hello " + req.getParameter("name"));
                 }
             }).addMapping("/hello");
         });
