@@ -7,7 +7,7 @@
 누군가 스프링부트의 구조나 원리를 공부할 때 참고가 되길 바랍니다!
 
 > 참고 강의: [토비의 스프링 부트 - 이해와 원리](https://inf.run/enQ2z)
-> 관련 글: [블로그 링크](https://your-blog-link.com)
+> 관련 글: [블로그 링크](https://yeon2-dev.tistory.com/14)
 
 ---
 
